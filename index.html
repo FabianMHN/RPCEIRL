@@ -3,287 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RODOLFO PEREZ CONSULTORIA EIRL | Soluciones Avanzadas SAP</title>
-    <!-- Iconos de última generación para un look de alta confianza -->
+    <title>RODOLFO PEREZ CONSULTORIA EIRL | Expertos SAP</title>
+    <!-- Iconos de alta confianza -->
     <link rel="stylesheet" href="https://cloudflare.com">
     <style>
-        /* --- COLORES CORPORATIVOS PREMIUM --- */
         :root {
-            --primary: #0a192f;      /* Azul Marino Oscuro Absoluto (Seguridad) */
-            --accent: #0070d2;       /* Azul Oficial SAP (Identidad Tecnológica) */
-            --secondary: #172a45;    /* Variación Profunda */
-            --light-bg: #f4f7fa;     /* Gris Ultra Limpio Clínico */
-            --dark-text: #0f172a;    /* Texto Principal Profesional */
-            --light-text: #475569;   /* Texto Secundario Suave */
+            --primary: #0a192f;
+            --accent: #0070d2;
+            --light-bg: #f4f7fa;
+            --dark-text: #0f172a;
+            --light-text: #475569;
             --white: #ffffff;
         }
-
-        /* --- CONFIGURACIÓN BASE --- */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            scroll-behavior: smooth;
-        }
-
-        body {
-            color: var(--dark-text);
-            background-color: var(--light-bg);
-            line-height: 1.7;
-            padding-top: 80px;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        /* --- BOTONES DINÁMICOS --- */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            padding: 15px 35px;
-            background-color: var(--accent);
-            color: var(--white);
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 4px 14px rgba(0, 112, 210, 0.3);
-            font-size: 1rem;
-        }
-
-        .btn:hover {
-            background-color: #0059a6;
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0, 112, 210, 0.4);
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.6rem;
-            color: var(--primary);
-            margin-bottom: 15px;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            color: var(--light-text);
-            max-width: 650px;
-            margin: 0 auto 60px auto;
-            font-size: 1.15rem;
-        }
-
-        /* --- MENÚ DE NAVEGACIÓN --- */
-        header {
-            background-color: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-        }
-
-        header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-        }
-
-        .logo {
-            font-size: 1.35rem;
-            font-weight: 800;
-            color: var(--primary);
-            letter-spacing: -0.5px;
-        }
-
-        .logo span {
-            color: var(--accent);
-            font-weight: 400;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: var(--dark-text);
-            margin-left: 30px;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: var(--accent);
-        }
-
-        /* --- SECCIÓN HERO --- */
-        .hero {
-            background: radial-gradient(circle at top right, rgba(0, 112, 210, 0.15) 0%, transparent 60%), 
-                        linear-gradient(135deg, #03142c 0%, #0a192f 100%);
-            color: var(--white);
-            padding: 140px 0 140px 0;
-            position: relative;
-            text-align: center;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 60px;
-            background: linear-gradient(to top right, var(--light-bg) 49%, transparent 50%);
-        }
-
-        .hero-content {
-            max-width: 850px;
-            margin: 0 auto;
-        }
-
-        .hero h1 {
-            font-size: 3.8rem;
-            line-height: 1.15;
-            margin-bottom: 25px;
-            font-weight: 800;
-            letter-spacing: -1.5px;
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 45px;
-            color: #cbd5e1;
-            font-weight: 300;
-        }
-
-        /* --- SECCIÓN SERVICIOS --- */
-        .services {
-            padding: 100px 0;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 40px;
-        }
-
-        .card {
-            background-color: var(--white);
-            padding: 50px 35px;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.015);
-            transition: all 0.3s ease;
-            border: 1px solid rgba(0,0,0,0.02);
-            text-align: left;
-        }
-
-        .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
-            border-color: rgba(0, 112, 210, 0.15);
-        }
-
-        .card-icon {
-            font-size: 2.5rem;
-            color: var(--accent);
-            margin-bottom: 25px;
-        }
-
-        .card h3 {
-            color: var(--primary);
-            margin-bottom: 15px;
-            font-size: 1.45rem;
-            font-weight: 700;
-        }
-
-        .card p {
-            color: var(--light-text);
-            font-size: 1rem;
-        }
-
-        /* --- CONTACTO AUTOMÁTICO --- */
-        .contact-section {
-            padding: 100px 0;
-            background-color: var(--white);
-        }
-
-        .contact-box {
-            max-width: 650px;
-            margin: 0 auto;
-            background: var(--light-bg);
-            padding: 50px;
-            border-radius: 16px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.02);
-        }
-
-        .form-group {
-            margin-bottom: 25px;
-            text-align: left;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            color: var(--primary);
-        }
-
-        .form-group input, 
-        .form-group textarea {
-            width: 100%;
-            padding: 14px;
-            border: 1px solid #cbd5e1;
-            border-radius: 6px;
-            background-color: var(--white);
-            font-size: 1rem;
-            color: var(--dark-text);
-            transition: all 0.3s;
-        }
-
-        .form-group input:focus, 
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--accent);
-            box-shadow: 0 0 0 4px rgba(0, 112, 210, 0.1);
-        }
-
-        /* --- PIE DE PÁGINA --- */
-        footer {
-            background-color: var(--primary);
-            color: rgba(255,255,255,0.6);
-            padding: 60px 0;
-            text-align: center;
-            font-size: 0.95rem;
-            border-top: 1px solid rgba(255,255,255,0.05);
-        }
-
-        footer p {
-            margin-bottom: 5px;
-        }
-
-        /* --- RESPONSIVIDAD MÓVIL --- */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.6rem; }
-            .contact-box { padding: 35px 20px; }
-            header .container { flex-direction: column; gap: 15px; }
-            nav a { margin: 0 10px; }
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; scroll-behavior: smooth; }
+        body { color: var(--dark-text); background-color: var(--light-bg); line-height: 1.7; padding-top: 80px; }
+        .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+        .btn { display: inline-flex; align-items: center; gap: 12px; padding: 15px 35px; background-color: var(--accent); color: var(--white); text-decoration: none; border-radius: 6px; font-weight: 600; border: none; cursor: pointer; box-shadow: 0 4px 14px rgba(0, 112, 210, 0.3); }
+        .btn:hover { background-color: #0059a6; transform: translateY(-3px); }
+        .section-title { text-align: center; font-size: 2.5rem; color: var(--primary); margin-bottom: 15px; font-weight: 800; }
+        .section-subtitle { text-align: center; color: var(--light-text); max-width: 650px; margin: 0 auto 60px auto; font-size: 1.1rem; }
+        header { background-color: rgba(255, 255, 255, 0.96); backdrop-filter: blur(10px); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02); position: fixed; width: 100%; top: 0; left: 0; z-index: 1000; }
+        header .container { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; }
+        .logo { font-size: 1.35rem; font-weight: 800; color: var(--primary); }
+        .logo span { color: var(--accent); font-weight: 400; }
+        nav a { text-decoration: none; color: var(--dark-text); margin-left: 30px; font-weight: 600; }
+        nav a:hover { color: var(--accent); }
+        .hero { background: linear-gradient(135deg, #03142c 0%, #0a192f 100%); color: var(--white); padding: 120px 0; text-align: center; }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 25px; font-weight: 800; }
+        .hero p { font-size: 1.3rem; margin-bottom: 45px; color: #cbd5e1; }
+        .services { padding: 80px 0; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
+        .card { background-color: var(--white); padding: 40px 35px; border-radius: 12px; border: 1px solid rgba(0,0,0,0.02); box-shadow: 0 10px 30px rgba(0,0,0,0.01); }
+        .card-icon { font-size: 2.5rem; color: var(--accent); margin-bottom: 20px; }
+        .contact-section { padding: 80px 0; background-color: var(--white); text-align: center; }
+        .contact-box { max-width: 600px; margin: 0 auto; background: var(--light-bg); padding: 40px; border-radius: 16px; }
+        .form-group { margin-bottom: 20px; text-align: left; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: var(--primary); }
+        .form-group input, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 1rem; }
+        footer { background-color: var(--primary); color: rgba(255,255,255,0.6); padding: 40px 0; text-align: center; font-size: 0.95rem; }
+        @media (max-width: 768px) { .hero h1 { font-size: 2.4rem; } header .container { flex-direction: column; gap: 15px; } nav a { margin: 0 10px; } }
     </style>
 </head>
 <body>
 
-    <!-- MENÚ DE NAVEGACIÓN -->
+    <!-- MENÚ -->
     <header>
         <div class="container">
             <div class="logo">RODOLFO PEREZ <span>CONSULTORIA EIRL</span></div>
@@ -295,29 +58,75 @@
         </div>
     </header>
 
-    <!-- SECCIÓN HERO -->
+    <!-- HERO -->
     <section id="inicio" class="hero">
         <div class="container">
-            <div class="hero-content">
-                <h1>Infraestructura SAP Estable, Moderna y de Confianza</h1>
-                <p>Especialistas de élite en ingeniería de procesos y arquitectura corporativa SAP. Garantizamos continuidad operacional crítica y soporte de excelencia técnica.</p>
-                <a href="#contacto" class="btn">Iniciar Consultoría Institucional <i class="fas fa-arrow-right"></i></a>
-            </div>
+            <h1>Infraestructura SAP Estable y de Confianza</h1>
+            <p>Especialistas en ingeniería de procesos y arquitectura corporativa SAP. Garantizamos soporte de excelencia técnica.</p>
+            <a href="#contacto" class="btn">Iniciar Consultoría <i class="fas fa-arrow-right"></i></a>
         </div>
     </section>
 
-    <!-- SECCIÓN SERVICIOS -->
+    <!-- SERVICIOS -->
     <section id="servicios" class="services">
         <div class="container">
-            <h2 class="section-title">Servicios de Soporte y Arquitectura</h2>
-            <p class="section-subtitle">Soluciones sistemáticas de ingeniería avanzada para mitigar riesgos logísticos y maximizar el rendimiento empresarial.</p>
-            
+            <h2 class="section-title">Servicios de Soporte SAP</h2>
+            <p class="section-subtitle">Soluciones avanzadas para mitigar riesgos logísticos y maximizar el rendimiento empresarial.</p>
             <div class="grid">
                 <div class="card">
                     <div class="card-icon"><i class="fas fa-cubes"></i></div>
                     <h3>Implementación y Migración</h3>
-                    <p>Estructuración técnica fluida y migración controlada hacia entornos funcionales SAP, cuidando la integridad de sus bases de datos estratégicas.</p>
+                    <p>Estructuración técnica fluida y migración controlada hacia entornos funcionales SAP de forma segura.</p>
                 </div>
                 <div class="card">
                     <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
-                    <h3>Soporte Crítico de Excelencia</h3>
+                    <h3>Soporte Crítico</h3>
+                    <p>Resolución inmediata de incidencias de software en módulos clave para resguardar la productividad corporativa.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Optimización Funcional</h3>
+                    <p>Alineación analítica de sistemas SAP para resolver cuellos de botella de procesamiento de datos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Hablemos de su Próximo Hito</h2>
+            <p class="section-subtitle">Complete los campos preliminares para agendar una reunión formal con nuestra consultoría.</p>
+            <div class="contact-box">
+                <form action="https://formsubmit.co" method="POST">
+                    <input type="hidden" name="_subject" value="Nuevo Requerimiento SAP - Web Corporativa">
+                    <input type="hidden" name="_captcha" value="false">
+                    <div class="form-group">
+                        <label>Nombre Completo o Razón Social</label>
+                        <input type="text" name="name" placeholder="Ej. Corporación Logística S.A." required>
+                    </div>
+                    <div class="form-group">
+                        <label>Dirección de Correo Corporativo</label>
+                        <input type="email" name="email" placeholder="ejemplo@empresa.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Alcance del Proyecto o Incidencia</label>
+                        <textarea name="message" rows="5" placeholder="Detalle brevemente el tipo de soporte que requiere..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%; justify-content: center;">
+                        Enviar Requerimiento <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- PIE -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 RODOLFO PEREZ CONSULTORIA EIRL. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
