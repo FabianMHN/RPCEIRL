@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RODOLFO PEREZ CONSULTORIA EIRL | Expertos SAP</title>
+    <!-- CAMBIO: Nombre de la pestaña actualizado -->
+    <title>RODOLFO PEREZ CONSULTORIA EIRL | Consultoria experta en SAP</title>
     
-    <!-- Librería de íconos FontAwesome 6 (Versión más actualizada y confiable) -->
+    <!-- Librería de íconos FontAwesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <style>
@@ -35,9 +36,9 @@
         nav a { text-decoration: none; color: var(--dark-text); margin-left: 30px; font-weight: 600; transition: color 0.2s ease; }
         nav a:hover { color: var(--accent); }
         
-        /* HERO: Nueva imagen nítida de Data Center de alta tecnología libre de copyright */
+        /* HERO: Filtro azul más traslúcido para resaltar la imagen de fondo corporativa */
         .hero { 
-            background: linear-gradient(135deg, rgba(3, 20, 44, 0.85) 0%, rgba(10, 25, 47, 0.92) 100%), 
+            background: linear-gradient(135deg, rgba(3, 20, 44, 0.65) 0%, rgba(10, 25, 47, 0.75) 100%), 
                         url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1600&auto=format&fit=crop'); 
             background-size: cover;
             background-position: center;
@@ -46,20 +47,18 @@
             padding: 160px 0; 
             text-align: center; 
         }
+        .hero .location-tag { display: inline-block; background-color: rgba(0, 112, 210, 0.3); backdrop-filter: blur(4px); padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; border: 1px solid rgba(255,255,255,0.2); }
         .hero h1 { font-size: 3.8rem; margin-bottom: 25px; font-weight: 800; letter-spacing: -1px; }
-        .hero p { font-size: 1.35rem; max-width: 800px; margin: 0 auto; color: #e2e8f0; font-weight: 400; }
+        .hero p { font-size: 1.35rem; max-width: 800px; margin: 0 auto; color: #ffffff; font-weight: 400; text-shadow: 0 2px 4px rgba(0,0,0,0.4); }
         
         /* SERVICIOS */
         .services { padding: 100px 0; background-color: var(--light-bg); }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
         
-        /* Tarjetas de servicios modernizadas */
         .card { background-color: var(--white); padding: 45px 35px; border-radius: 16px; border: 1px solid rgba(0, 0, 0, 0.04); box-shadow: 0 10px 30px rgba(15, 23, 42, 0.03); transition: all 0.3s ease; }
         .card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(15, 23, 42, 0.06); border-color: rgba(0, 112, 210, 0.2); }
         
-        /* Íconos vectoriales tecnológicos restaurados y estilizados */
         .card-icon { width: 60px; height: 60px; background-color: rgba(0, 112, 210, 0.08); color: var(--accent); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; margin-bottom: 25px; transition: all 0.3s ease; }
-        .card:hover { background-color: var(--white); }
         .card:hover .card-icon { background-color: var(--accent); color: var(--white); }
         .card h3 { font-size: 1.4rem; color: var(--primary); margin-bottom: 15px; font-weight: 700; }
         .card p { color: var(--light-text); font-size: 1rem; }
@@ -73,7 +72,9 @@
         .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(0, 112, 210, 0.15); }
         
         /* PIE */
-        footer { background-color: var(--primary); color: #94a3b8; padding: 40px 0; text-align: center; font-size: 0.95rem; border-top: 1px solid rgba(255,255,255,0.05); }
+        footer { background-color: var(--primary); color: #94a3b8; padding: 45px 0; text-align: center; font-size: 0.95rem; border-top: 1px solid rgba(255,255,255,0.05); }
+        footer .footer-location { margin-top: 8px; font-size: 0.85rem; color: #64748b; }
+        footer .footer-location i { color: var(--accent); margin-right: 5px; }
         
         @media (max-width: 768px) { .hero h1 { font-size: 2.6rem; } header .container { flex-direction: column; gap: 15px; } nav a { margin: 0 10px; } .contact-box { padding: 30px 20px; } }
     </style>
@@ -95,6 +96,8 @@
     <!-- HERO -->
     <section id="inicio" class="hero">
         <div class="container">
+            <!-- NUEVO: Etiqueta de ubicación sutil -->
+            <div class="location-tag"><i class="fa-solid fa-location-dot"></i> Santiago de Chile</div>
             <h1>Consultoría experta en SAP</h1>
             <p>Ingeniería de procesos, arquitectura corporativa y soporte de excelencia técnica para mantener la continuidad operativa de su infraestructura empresarial.</p>
         </div>
@@ -135,8 +138,9 @@
     <!-- CONTACTO -->
     <section id="contacto" class="contact-section">
         <div class="container">
-            <h2 class="section-title">Hablemos de su Próximo Hito</h2>
-            <p class="section-subtitle">Complete los campos preliminares para agendar una reunión formal con nuestra consultoría.</p>
+            <!-- CAMBIO: "Contacto" directo como título principal -->
+            <h2 class="section-title">Contacto</h2>
+            <p class="section-subtitle">Hablemos de su próximo hito. Complete los campos preliminares para agendar una reunión formal con nuestra consultoría.</p>
             <div class="contact-box">
                 <!-- REEMPLAZA 'tu-correo@ejemplo.com' por tu dirección de correo electrónico corporativo real -->
                 <form action="https://formsubmit.co/tu-correo@ejemplo.com" method="POST">
@@ -166,6 +170,8 @@
     <footer>
         <div class="container">
             <p>&copy; 2026 RODOLFO PEREZ CONSULTORIA EIRL. Todos los derechos reservados.</p>
+            <!-- CAMBIO: Ubicación formal en el Footer -->
+            <p class="footer-location"><i class="fa-solid fa-location-dot"></i> Santiago de Chile</p>
         </div>
     </footer>
 
