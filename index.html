@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- CAMBIO: Nombre de la pestaña actualizado -->
     <title>RODOLFO PEREZ CONSULTORIA EIRL | Consultoria experta en SAP</title>
     
     <!-- Librería de íconos FontAwesome 6 -->
@@ -36,7 +35,7 @@
         nav a { text-decoration: none; color: var(--dark-text); margin-left: 30px; font-weight: 600; transition: color 0.2s ease; }
         nav a:hover { color: var(--accent); }
         
-        /* HERO: Filtro azul más traslúcido para resaltar la imagen de fondo corporativa */
+        /* HERO */
         .hero { 
             background: linear-gradient(135deg, rgba(3, 20, 44, 0.65) 0%, rgba(10, 25, 47, 0.75) 100%), 
                         url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1600&auto=format&fit=crop'); 
@@ -47,7 +46,6 @@
             padding: 160px 0; 
             text-align: center; 
         }
-        .hero .location-tag { display: inline-block; background-color: rgba(0, 112, 210, 0.3); backdrop-filter: blur(4px); padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; border: 1px solid rgba(255,255,255,0.2); }
         .hero h1 { font-size: 3.8rem; margin-bottom: 25px; font-weight: 800; letter-spacing: -1px; }
         .hero p { font-size: 1.35rem; max-width: 800px; margin: 0 auto; color: #ffffff; font-weight: 400; text-shadow: 0 2px 4px rgba(0,0,0,0.4); }
         
@@ -93,11 +91,9 @@
         </div>
     </header>
 
-    <!-- HERO -->
+    <!-- HERO (Etiqueta eliminada para un look más limpio) -->
     <section id="inicio" class="hero">
         <div class="container">
-            <!-- NUEVO: Etiqueta de ubicación sutil -->
-            <div class="location-tag"><i class="fa-solid fa-location-dot"></i> Santiago de Chile</div>
             <h1>Consultoría experta en SAP</h1>
             <p>Ingeniería de procesos, arquitectura corporativa y soporte de excelencia técnica para mantener la continuidad operativa de su infraestructura empresarial.</p>
         </div>
@@ -110,11 +106,11 @@
             <p class="section-subtitle">Soluciones avanzadas diseñadas para mitigar riesgos logísticos y maximizar el rendimiento de sus sistemas corporativos.</p>
             <div class="grid">
                 
-                <!-- Tarjeta 1 -->
+                <!-- Tarjeta 1: Especialización MM -->
                 <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-network-wired"></i></div>
-                    <h3>Implementación y Migración</h3>
-                    <p>Estructuración técnica fluida y migración controlada hacia entornos funcionales SAP de forma segura, minimizando los tiempos de inactividad.</p>
+                    <div class="card-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
+                    <h3>Especialización SAP MM</h3>
+                    <p>Consultoría experta enfocada en el módulo de <strong>Gestión de Materiales (MM)</strong>. Optimización integral del Maestro de Materiales, control de inventarios, flujo de compras y cadena de suministro logística.</p>
                 </div>
                 
                 <!-- Tarjeta 2 -->
@@ -138,11 +134,9 @@
     <!-- CONTACTO -->
     <section id="contacto" class="contact-section">
         <div class="container">
-            <!-- CAMBIO: "Contacto" directo como título principal -->
             <h2 class="section-title">Contacto</h2>
             <p class="section-subtitle">Hablemos de su próximo hito. Complete los campos preliminares para agendar una reunión formal con nuestra consultoría.</p>
             <div class="contact-box">
-                <!-- REEMPLAZA 'tu-correo@ejemplo.com' por tu dirección de correo electrónico corporativo real -->
                 <form action="https://formsubmit.co/tu-correo@ejemplo.com" method="POST">
                     <input type="hidden" name="_subject" value="Nuevo Requerimiento SAP - Web Corporativa">
                     <input type="hidden" name="_captcha" value="false">
@@ -170,7 +164,6 @@
     <footer>
         <div class="container">
             <p>&copy; 2026 RODOLFO PEREZ CONSULTORIA EIRL. Todos los derechos reservados.</p>
-            <!-- CAMBIO: Ubicación formal en el Footer -->
             <p class="footer-location"><i class="fa-solid fa-location-dot"></i> Santiago de Chile</p>
         </div>
     </footer>
