@@ -16,6 +16,7 @@
             --dark-text: #0f172a;
             --light-text: #64748b;
             --white: #ffffff;
+            --dark-card: #112240;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', system-ui, sans-serif; scroll-behavior: smooth; }
         body { color: var(--dark-text); background-color: var(--light-bg); line-height: 1.7; padding-top: 80px; }
@@ -61,20 +62,39 @@
         .card h3 { font-size: 1.4rem; color: var(--primary); margin-bottom: 15px; font-weight: 700; }
         .card p { color: var(--light-text); font-size: 1rem; }
         
-        /* CONTACTO */
-        .contact-section { padding: 100px 0; background-color: var(--white); text-align: center; }
-        .contact-box { max-width: 600px; margin: 0 auto; background: var(--light-bg); padding: 50px 40px; border-radius: 20px; border: 1px solid rgba(0,0,0,0.02); box-shadow: inset 0 2px 4px rgba(0,0,0,0.01); }
+        /* NUEVO: SECCIÓN DE CONTACTO TECNOLÓGICA */
+        .contact-section { padding: 100px 0; background-color: var(--primary); color: var(--white); }
+        .contact-section .section-title { color: var(--white); }
+        .contact-section .section-subtitle { color: #94a3b8; }
+        
+        .contact-wrapper { display: grid; grid-template-columns: 1fr 1.2fr; gap: 50px; align-items: center; background-color: #0f1e36; border-radius: 24px; overflow: hidden; border: 1px solid rgba(255,255,255,0.05); box-shadow: 0 20px 50px rgba(0,0,0,0.3); }
+        
+        /* Columna de Imagen Corporativa */
+        .contact-image-side { background: linear-gradient(135deg, rgba(10, 25, 47, 0.4) 0%, rgba(3, 20, 44, 0.8) 100%), url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800&auto=format&fit=crop'); background-size: cover; background-position: center; height: 100%; min-height: 550px; padding: 60px 40px; display: flex; flex-direction: column; justify-content: flex-end; position: relative; }
+        .contact-info-overlay { background: rgba(10, 25, 47, 0.85); backdrop-filter: blur(8px); padding: 30px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); }
+        .contact-info-overlay h4 { font-size: 1.5rem; margin-bottom: 10px; color: var(--white); font-weight: 700; }
+        .contact-info-overlay p { color: #cbd5e1; font-size: 1rem; margin-bottom: 15px; }
+        .contact-meta { display: flex; align-items: center; gap: 10px; font-size: 0.95rem; color: #a5b4fc; font-weight: 600; }
+        .contact-meta i { color: var(--accent); }
+
+        /* Columna del Formulario */
+        .contact-form-side { padding: 50px 40px; }
         .form-group { margin-bottom: 25px; text-align: left; }
-        .form-group label { display: block; margin-bottom: 10px; font-weight: 600; color: var(--primary); font-size: 0.95rem; }
-        .form-group input, .form-group textarea { width: 100%; padding: 14px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 1rem; background-color: var(--white); transition: all 0.2s ease; }
-        .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(0, 112, 210, 0.15); }
+        .form-group label { display: block; margin-bottom: 10px; font-weight: 600; color: #cbd5e1; font-size: 0.95rem; }
+        .form-group input, .form-group textarea { width: 100%; padding: 14px; border: 1px solid rgba(255,255,255,0.15); border-radius: 8px; font-size: 1rem; background-color: #112240; color: var(--white); transition: all 0.3s ease; }
+        .form-group input::placeholder, .form-group textarea::placeholder { color: #64748b; }
+        
+        /* Efecto de foco moderno e iluminado */
+        .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 15px rgba(0, 112, 210, 0.4); background-color: #162c52; }
         
         /* PIE */
-        footer { background-color: var(--primary); color: #94a3b8; padding: 45px 0; text-align: center; font-size: 0.95rem; border-top: 1px solid rgba(255,255,255,0.05); }
+        footer { background-color: #071121; color: #94a3b8; padding: 45px 0; text-align: center; font-size: 0.95rem; border-top: 1px solid rgba(255,255,255,0.05); }
         footer .footer-location { margin-top: 8px; font-size: 0.85rem; color: #64748b; }
         footer .footer-location i { color: var(--accent); margin-right: 5px; }
         
-        @media (max-width: 768px) { .hero h1 { font-size: 2.6rem; } header .container { flex-direction: column; gap: 15px; } nav a { margin: 0 10px; } .contact-box { padding: 30px 20px; } }
+        /* RESPONSIVO */
+        @media (max-width: 992px) { .contact-wrapper { grid-template-columns: 1fr; } .contact-image-side { min-height: 300px; justify-content: center; } }
+        @media (max-width: 768px) { .hero h1 { font-size: 2.6rem; } header .container { flex-direction: column; gap: 15px; } nav a { margin: 0 10px; } .contact-form-side { padding: 30px 20px; } }
     </style>
 </head>
 <body>
@@ -113,14 +133,14 @@
                     <p>Consultoría experta enfocada en el módulo de <strong>Gestión de Materiales (MM)</strong>. Optimización integral del Maestro de Materiales, control de inventarios, flujo de compras y cadena de suministro logística.</p>
                 </div>
                 
-                <!-- Tarjeta 2: Soporte Crítico (Actualizado enfoque) -->
+                <!-- Tarjeta 2: Soporte Crítico -->
                 <div class="card">
                     <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
                     <h3>Soporte Crítico</h3>
                     <p>Resolución y mitigación de incidencias complejas de software en módulos clave, orientadas estratégicamente a resguardar y asegurar la estabilidad de la productividad corporativa.</p>
                 </div>
                 
-                <!-- Tarjeta 3: Optimización Funcional (Ícono reparado) -->
+                <!-- Tarjeta 3: Optimización Funcional -->
                 <div class="card">
                     <div class="card-icon"><i class="fa-solid fa-chart-line"></i></div>
                     <h3>Optimización Funcional</h3>
@@ -131,31 +151,53 @@
         </div>
     </section>
 
-    <!-- CONTACTO -->
+    <!-- CONTACTO (REDiseñado: Estilo Tecnológico Moderno de Alto Contraste) -->
     <section id="contacto" class="contact-section">
         <div class="container">
             <h2 class="section-title">Contacto</h2>
             <p class="section-subtitle">Hablemos de su próximo hito. Complete los campos preliminares para agendar una reunión formal con nuestra consultoría.</p>
-            <div class="contact-box">
-                <form action="https://formsubmit.co/tu-correo@ejemplo.com" method="POST">
-                    <input type="hidden" name="_subject" value="Nuevo Requerimiento SAP - Web Corporativa">
-                    <input type="hidden" name="_captcha" value="false">
-                    <div class="form-group">
-                        <label>Nombre Completo o Razón Social</label>
-                        <input type="text" name="name" placeholder="Ej. Corporación Logística S.A." required>
+            
+            <div class="contact-wrapper">
+                
+                <!-- Lado Izquierdo: Imagen Tecnológica y Tarjeta de Información Flotante -->
+                <div class="contact-image-side">
+                    <div class="contact-info-overlay">
+                        <h4>Consultoría SAP de Alta Confianza</h4>
+                        <p>Diseñamos e implementamos la arquitectura corporativa robusta que su empresa necesita para escalar de forma segura.</p>
+                        <div class="contact-meta">
+                            <i class="fa-solid fa-layer-group"></i> Cobertura y Arquitectura SAP Enterprise
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label>Dirección de Correo Corporativo</label>
-                        <input type="email" name="email" placeholder="ejemplo@empresa.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Alcance del Proyecto o Incidencia</label>
-                        <textarea name="message" rows="5" placeholder="Detalle brevemente el tipo de soporte que requiere..." required></textarea>
-                    </div>
-                    <button type="submit" class="btn" style="width: 100%; justify-content: center;">
-                        Enviar Requerimiento <i class="fas fa-paper-plane"></i>
-                    </button>
-                </form>
+                </div>
+                
+                <!-- Lado Derecho: Formulario Estilo Consola/Premium -->
+                <div class="contact-form-side">
+                    <!-- REEMPLAZA 'tu-correo@ejemplo.com' por tu dirección de correo electrónico corporativo real -->
+                    <form action="https://formsubmit.co/tu-correo@ejemplo.com" method="POST">
+                        <input type="hidden" name="_subject" value="Nuevo Requerimiento SAP - Web Corporativa">
+                        <input type="hidden" name="_captcha" value="false">
+                        
+                        <div class="form-group">
+                            <label>Nombre Completo o Razón Social</label>
+                            <input type="text" name="name" placeholder="Ej. Corporación Logística S.A." required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Dirección de Correo Corporativo</label>
+                            <input type="email" name="email" placeholder="ejemplo@empresa.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Alcance del Proyecto o Incidencia</label>
+                            <textarea name="message" rows="5" placeholder="Detalle brevemente el tipo de soporte o requerimiento que requiere..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn" style="width: 100%; justify-content: center;">
+                            Enviar Requerimiento <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+                
             </div>
         </div>
     </section>
